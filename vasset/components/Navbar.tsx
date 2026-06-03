@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="mailto:info@vassetglobal.com"
+            href="https://wa.link/95c1j5"
             className="text-sm px-5 py-2.5 rounded-full border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-black transition-all duration-300 font-medium"
           >
             Get in Touch

@@ -3,7 +3,7 @@ import {
   KeyRound, 
   Lock, 
   Smartphone, 
-  ClipboardList, // Fixed from ClipboardText to valid Lucide icon name
+  ClipboardList, 
   Laptop, 
   Handshake, 
   Building2, 

@@ -71,7 +71,7 @@ export default function ContactFooter() {
 
           {/* Big CTA */}
           <a
-            href="mailto:info@vassetglobal.com"
+            href="https://wa.link/95c1j5"
             className="group inline-flex items-center gap-3 px-10 py-5 bg-[#C9A84C] text-black font-semibold rounded-full hover:bg-[#E8C87A] transition-all duration-300 text-base"
           >
             Start a Conversation
