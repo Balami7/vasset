@@ -1,5 +1,7 @@
 "use client";
+
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const links = ["Services", "Products", "About", "Contact"];
@@ -23,9 +25,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#C9A84C] to-[#8B6914] flex items-center justify-center font-display font-800 text-sm text-black">
-            V
-          </div>
+          <Image 
+            src="/logo.png" 
+            alt="VAsset Global Logo" 
+            width={36} 
+            height={36} 
+            className="object-contain"
+            priority 
+          />
           <span className="font-display font-700 text-lg tracking-tight">
             VAsset<span className="gold"> Global</span>
           </span>
