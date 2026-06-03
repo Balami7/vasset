@@ -131,7 +131,7 @@ export default function Products() {
                 rel="noopener noreferrer"
                 className={`card-hover group relative rounded-2xl border ${
                   p.border
-                } bg-gradient-to-br ${p.color} bg-[#111113] p-7 flex flex-col gap-4 ${
+                } bg-gradient-to-br ${p.color} bg-[var(--card-bg)] p-7 flex flex-col gap-4 ${
                   p.featured ? "ring-1 ring-[var(--gold-light-30)]" : ""
                 }`}
               >
