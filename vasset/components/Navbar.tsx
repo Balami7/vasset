@@ -34,7 +34,7 @@ export default function Navbar() {
             priority 
           />
           <span className="font-display font-700 text-lg tracking-tight">
-            VAsset<span className="gold"> Global</span>
+            VASSET<span className="gold"> GLOBAL</span>
           </span>
         </a>
 
