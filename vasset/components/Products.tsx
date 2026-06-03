@@ -3,10 +3,10 @@ import {
   KeyRound, 
   Lock, 
   Smartphone, 
-  ClipboardText, 
+  ClipboardList, // Fixed from ClipboardText to valid Lucide icon name
   Laptop, 
   Handshake, 
-  Building2,
+  Building2, 
   LucideIcon 
 } from "lucide-react";
 
@@ -15,7 +15,7 @@ interface Product {
   tag: string;
   desc: string;
   url: string;
-  Icon: LucideIcon; // Changed from string to LucideIcon type
+  Icon: LucideIcon;
   color: string;
   border: string;
   featured?: boolean;
@@ -27,7 +27,7 @@ const products: Product[] = [
     tag: "Verification",
     desc: "Unique verification codes for documents, certificates, receipts, and products — with QR support and full audit trails.",
     url: "https://idcode.ng",
-    Icon: KeyRound, // Replaced emoji / URL code with KeyRound
+    Icon: KeyRound,
     color: "from-[#C9A84C22] to-[#8B691408]",
     border: "border-[#C9A84C30]",
   },
@@ -36,7 +36,7 @@ const products: Product[] = [
     tag: "Commerce",
     desc: "Secure discounted, auction, and clearance items with a commitment deposit. Reserve now, pay later.",
     url: "https://deallock.ng",
-    Icon: Lock, // Replaced emoji / URL code with Lock
+    Icon: Lock,
     color: "from-[#1A3A2A22] to-transparent",
     border: "border-[#2A5A3A30]",
   },
@@ -45,7 +45,7 @@ const products: Product[] = [
     tag: "QR Platform",
     desc: "Dynamic and static QR code generation with scan analytics, link management, and event access control.",
     url: "https://scancode.ng",
-    Icon: Smartphone, // Replaced 📱 with Smartphone
+    Icon: Smartphone,
     color: "from-[#1A2A3A22] to-transparent",
     border: "border-[#2A3A5A30]",
   },
@@ -54,7 +54,7 @@ const products: Product[] = [
     tag: "Representation",
     desc: "Submit documents, get represented, and retrieve records at government offices or institutions — without being there.",
     url: "https://submitar.ng",
-    Icon: ClipboardText, // Replaced 📋 with ClipboardText
+    Icon: ClipboardList, // Assigned corrected icon variable
     color: "from-[#2A1A3A22] to-transparent",
     border: "border-[#3A2A5A30]",
   },
@@ -63,7 +63,7 @@ const products: Product[] = [
     tag: "IT Support",
     desc: "On-site and remote computer repairs, hardware upgrades, software installation, and managed IT services.",
     url: "https://computerservice.ng",
-    Icon: Laptop, // Replaced 💻 with Laptop
+    Icon: Laptop,
     color: "from-[#3A1A1A22] to-transparent",
     border: "border-[#5A2A2A30]",
   },
@@ -72,7 +72,7 @@ const products: Product[] = [
     tag: "Social Impact",
     desc: "Connect volunteers with NGOs, community projects, and CSR teams. Track impact, recognize contributions.",
     url: "https://voluwork.ng",
-    Icon: Handshake, // Replaced 🤝 with Handshake
+    Icon: Handshake,
     color: "from-[#1A3A1A22] to-transparent",
     border: "border-[#2A5A2A30]",
   },
@@ -81,7 +81,7 @@ const products: Product[] = [
     tag: "Real Estate",
     desc: "Abuja's premier rental and shortlet marketplace — connecting landlords, tenants, and travelers.",
     url: "https://abujarenthub.ng",
-    Icon: Building2, // Replaced 🏙️ with Building2
+    Icon: Building2,
     color: "from-[#C9A84C15] to-transparent",
     border: "border-[#C9A84C25]",
     featured: true,
@@ -107,8 +107,7 @@ export default function Products() {
               Product Ecosystem
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-700 text-white">
-              7 Platforms.
-              <br />
+              7 Platforms. <br />
               <span className="gold-gradient">One Vision.</span>
             </h2>
           </div>
@@ -123,7 +122,7 @@ export default function Products() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {products.map((p, i) => {
-            const ProductIcon = p.Icon; // Assigning icon to local variable for JSX rendering
+            const ProductIcon = p.Icon;
             return (
               <a
                 key={i}
