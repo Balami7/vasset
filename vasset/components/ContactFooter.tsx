@@ -38,11 +38,11 @@ export default function ContactFooter() {
           <p className="text-xs font-medium tracking-widest uppercase text-[#C9A84C] mb-4">
             Let&apos;s Work Together
           </p>
-          <h2 className="font-display text-4xl md:text-6xl font-700 text-white mb-6 leading-tight">
+          <h2 className="font-display text-4xl md:text-6xl font-700 text-[var(--foreground)] mb-6 leading-tight">
             Ready to Build<br />
             <span className="gold-gradient">Something Great?</span>
           </h2>
-          <p className="text-[#6B6B72] text-lg font-light max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-[var(--text-tertiary)] text-lg font-light max-w-2xl mx-auto mb-12 leading-relaxed">
             Whether you need property management, a technology platform, or business support — VAsset Global has the expertise, the team, and the tools to deliver.
           </p>
 
@@ -54,15 +54,15 @@ export default function ContactFooter() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="group card-hover bg-[#111113] border border-[#ffffff08] rounded-2xl p-6 text-center hover:border-[#C9A84C33]"
+                className="group card-hover bg-[var(--card-bg)] border border-[var(--border-light)] rounded-2xl p-6 text-center hover:border-[var(--gold-light-20)]"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#C9A84C12] border border-[#C9A84C1A] flex items-center justify-center mx-auto mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[var(--gold-light-10)] border border-[var(--gold-light-15)] flex items-center justify-center mx-auto mb-3">
                   <item.icon size={18} className="text-[#C9A84C]" />
                 </div>
-                <p className="text-xs text-[#6B6B72] uppercase tracking-wider mb-1 font-medium">
+                <p className="text-xs text-[var(--text-tertiary)] uppercase tracking-wider mb-1 font-medium">
                   {item.label}
                 </p>
-                <p className="text-white text-sm font-medium group-hover:text-[#C9A84C] transition-colors">
+                <p className="text-[var(--foreground)] text-sm font-medium group-hover:text-[var(--gold)] transition-colors">
                   {item.value}
                 </p>
               </a>
@@ -81,7 +81,7 @@ export default function ContactFooter() {
       </section>
 
      {/* Footer */}
-<footer className="border-t border-[#ffffff08] py-16 px-6">
+<footer className="border-t border-[var(--border-light)] py-16 px-6">
   <div className="max-w-7xl mx-auto">
     <div className="flex flex-col md:flex-row md:items-start justify-between gap-10 mb-12">
       {/* Brand */}
@@ -98,7 +98,7 @@ export default function ContactFooter() {
             VAsset<span className="gold"> Global</span>
           </span>
         </div>
-        <p className="text-[#6B6B72] text-sm leading-relaxed">
+        <p className="text-[var(--text-tertiary)] text-sm leading-relaxed">
           Managing Assets. Building Solutions. Creating Opportunities.
         </p>
       </div>
@@ -111,7 +111,7 @@ export default function ContactFooter() {
             href={l.href}
             target={l.href.startsWith("http") ? "_blank" : undefined}
             rel="noopener noreferrer"
-            className="text-sm text-[#6B6B72] hover:text-[#C9A84C] transition-colors font-medium"
+            className="text-sm text-[var(--text-tertiary)] hover:text-[var(--gold)] transition-colors font-medium"
           >
             {l.label}
           </a>
@@ -121,10 +121,10 @@ export default function ContactFooter() {
 
     <hr className="divider-gold opacity-20 mb-8" />
 
-    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6B6B72]">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-tertiary)]">
       <p>© {new Date().getFullYear()} VAsset Global. All rights reserved.</p>
       <p>
-        <a href="https://vassetglobal.com" className="hover:text-[#C9A84C] transition-colors">
+        <a href="https://vassetglobal.com" className="hover:text-[var(--gold)] transition-colors">
           vassetglobal.com
         </a>
       </p>

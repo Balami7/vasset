@@ -60,19 +60,19 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="font-display font-800 leading-[1.05] mb-6">
-          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-2">
+          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[var(--foreground)] mb-2">
             Managing Assets.
           </span>
           <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl shimmer-text">
             Building Solutions.
           </span>
-          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#6B6B72] mt-2">
+          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[var(--text-tertiary)] mt-2">
             Creating Opportunities.
           </span>
         </h1>
 
         {/* Sub */}
-        <p className="text-lg md:text-xl text-[#6B6B72] max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        <p className="text-lg md:text-xl text-[var(--text-tertiary)] max-w-2xl mx-auto mb-10 font-light leading-relaxed">
           A diversified platform delivering property management, digital verification,
           business automation, and technology services across Africa.
         </p>
@@ -88,21 +88,21 @@ export default function Hero() {
           </a>
           <a
             href="#services"
-            className="flex items-center gap-2 px-8 py-4 border border-[#ffffff18] text-white rounded-full hover:border-[#C9A84C44] transition-all duration-300 text-sm font-medium"
+            className="flex items-center gap-2 px-8 py-4 border border-[var(--border-light)] text-[var(--foreground)] rounded-full hover:border-[var(--gold-light-30)] transition-all duration-300 text-sm font-medium"
           >
             Our Services
           </a>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#ffffff08] rounded-2xl overflow-hidden border border-[#ffffff08]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--border-light)] rounded-2xl overflow-hidden border border-[var(--border-light)]">
           {stats.map((s) => (
             <div
               key={s.label}
-              className="bg-[#0A0A0B] px-6 py-6 text-center hover:bg-[#111113] transition-colors"
+              className="bg-[var(--gradient-fade)] px-6 py-6 text-center hover:bg-[var(--card-bg)] transition-colors"
             >
               <div className="font-display text-3xl font-800 gold-gradient">{s.value}</div>
-              <div className="text-xs text-[#6B6B72] mt-1 font-medium uppercase tracking-wider">
+              <div className="text-xs text-[var(--text-tertiary)] mt-1 font-medium uppercase tracking-wider">
                 {s.label}
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <a
         href="#services"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#6B6B72] hover:text-[#C9A84C] transition-colors animate-float"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[var(--text-tertiary)] hover:text-[var(--gold)] transition-colors animate-float"
       >
         <ChevronDown size={24} />
       </a>

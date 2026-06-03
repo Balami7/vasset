@@ -3,21 +3,35 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --border-light: #ffffff08;
+  --text-secondary: #9B9BA4;
+  --text-tertiary: #6B6B72;
+  --border-light: #ffffff12;
   --nav-bg: #0A0A0Bcc;
-  --text-muted: #9B9BA4;
+  --card-bg: #111113;
   --gold: #C9A84C;
+  --gold-light-10: #C9A84C1a;
+  --gold-light-15: #C9A84C26;
+  --gold-light-20: #C9A84C33;
+  --gold-light-30: #C9A84C4d;
   --mobile-bg: #111113;
+  --gradient-fade: #0A0A0B;
 }
 
 html[data-theme="light"] {
   --background: #ffffff;
-  --foreground: #171717;
-  --border-light: #00000008;
-  --nav-bg: #f5f5f5;
-  --text-muted: #666666;
-  --gold: #D4AF37;
-  --mobile-bg: #eeeeee;
+  --foreground: #1a1a1a;
+  --text-secondary: #505050;
+  --text-tertiary: #666666;
+  --border-light: #0000001f;
+  --nav-bg: #fafafa;
+  --card-bg: #f5f5f5;
+  --gold: #B8860B;
+  --gold-light-10: #B8860B15;
+  --gold-light-15: #B8860B24;
+  --gold-light-20: #B8860B33;
+  --gold-light-30: #B8860B4d;
+  --mobile-bg: #f0f0f0;
+  --gradient-fade: #ffffff;
 }
 
 @theme inline {

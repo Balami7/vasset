@@ -28,8 +28,8 @@ const products: Product[] = [
     desc: "Unique verification codes for documents, certificates, receipts, and products — with QR support and full audit trails.",
     url: "https://idcode.ng",
     Icon: KeyRound,
-    color: "from-[#C9A84C22] to-[#8B691408]",
-    border: "border-[#C9A84C30]",
+    color: "from-[var(--gold-light-20)] to-[var(--gold-light-10)]",
+    border: "border-[var(--gold-light-30)]",
   },
   {
     name: "Deallock.ng",
@@ -37,8 +37,8 @@ const products: Product[] = [
     desc: "Secure discounted, auction, and clearance items with a commitment deposit. Reserve now, pay later.",
     url: "https://deallock.ng",
     Icon: Lock,
-    color: "from-[#1A3A2A22] to-transparent",
-    border: "border-[#2A5A3A30]",
+    color: "from-[var(--gold-light-20)] to-transparent",
+    border: "border-[var(--gold-light-30)]",
   },
   {
     name: "Scancode.ng",
@@ -46,8 +46,8 @@ const products: Product[] = [
     desc: "Dynamic and static QR code generation with scan analytics, link management, and event access control.",
     url: "https://scancode.ng",
     Icon: Smartphone,
-    color: "from-[#1A2A3A22] to-transparent",
-    border: "border-[#2A3A5A30]",
+    color: "from-[var(--gold-light-20)] to-transparent",
+    border: "border-[var(--gold-light-30)]",
   },
   {
     name: "Submitar.ng",
@@ -55,8 +55,8 @@ const products: Product[] = [
     desc: "Submit documents, get represented, and retrieve records at government offices or institutions — without being there.",
     url: "https://submitar.ng",
     Icon: ClipboardList, // Assigned corrected icon variable
-    color: "from-[#2A1A3A22] to-transparent",
-    border: "border-[#3A2A5A30]",
+    color: "from-[var(--gold-light-20)] to-transparent",
+    border: "border-[var(--gold-light-30)]",
   },
   {
     name: "ComputerService.ng",
@@ -64,8 +64,8 @@ const products: Product[] = [
     desc: "On-site and remote computer repairs, hardware upgrades, software installation, and managed IT services.",
     url: "https://computerservice.ng",
     Icon: Laptop,
-    color: "from-[#3A1A1A22] to-transparent",
-    border: "border-[#5A2A2A30]",
+    color: "from-[var(--gold-light-20)] to-transparent",
+    border: "border-[var(--gold-light-30)]",
   },
   {
     name: "Voluwork.ng",
@@ -73,8 +73,8 @@ const products: Product[] = [
     desc: "Connect volunteers with NGOs, community projects, and CSR teams. Track impact, recognize contributions.",
     url: "https://voluwork.ng",
     Icon: Handshake,
-    color: "from-[#1A3A1A22] to-transparent",
-    border: "border-[#2A5A2A30]",
+    color: "from-[var(--gold-light-20)] to-transparent",
+    border: "border-[var(--gold-light-30)]",
   },
   {
     name: "AbujaRentHub.ng",
@@ -82,8 +82,8 @@ const products: Product[] = [
     desc: "Abuja's premier rental and shortlet marketplace — connecting landlords, tenants, and travelers.",
     url: "https://abujarenthub.ng",
     Icon: Building2,
-    color: "from-[#C9A84C15] to-transparent",
-    border: "border-[#C9A84C25]",
+    color: "from-[var(--gold-light-15)] to-transparent",
+    border: "border-[var(--gold-light-30)]",
     featured: true,
   },
 ];
@@ -106,12 +106,12 @@ export default function Products() {
             <p className="text-xs font-medium tracking-widest uppercase text-[#C9A84C] mb-4">
               Product Ecosystem
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-700 text-white">
+            <h2 className="font-display text-4xl md:text-5xl font-700 text-[var(--foreground)]">
               7 Platforms. <br />
               <span className="gold-gradient">One Vision.</span>
             </h2>
           </div>
-          <p className="text-[#6B6B72] max-w-sm text-base font-light leading-relaxed md:text-right">
+            <p className="text-[var(--text-tertiary)] max-w-sm text-base font-light leading-relaxed md:text-right">
             A growing portfolio of technology brands solving real everyday
             challenges for individuals, businesses, and institutions.
           </p>
@@ -132,12 +132,12 @@ export default function Products() {
                 className={`card-hover group relative rounded-2xl border ${
                   p.border
                 } bg-gradient-to-br ${p.color} bg-[#111113] p-7 flex flex-col gap-4 ${
-                  p.featured ? "ring-1 ring-[#C9A84C30]" : ""
+                  p.featured ? "ring-1 ring-[var(--gold-light-30)]" : ""
                 }`}
               >
                 {p.featured && (
                   <div className="absolute top-4 right-4">
-                    <span className="text-xs px-2.5 py-1 rounded-full bg-[#C9A84C22] border border-[#C9A84C44] text-[#C9A84C] font-medium">
+                    <span className="text-xs px-2.5 py-1 rounded-full bg-[var(--gold-light-20)] border border-[var(--gold-light-30)] text-[var(--gold)] font-medium">
                       Featured
                     </span>
                   </div>
@@ -149,21 +149,21 @@ export default function Products() {
                       <ProductIcon size={24} strokeWidth={1.75} />
                     </div>
                     <div>
-                      <h3 className="font-display font-700 text-white text-base">
+                      <h3 className="font-display font-700 text-[var(--foreground)] text-base">
                         {p.name}
                       </h3>
-                      <span className="text-xs text-[#6B6B72] font-medium">
+                      <span className="text-xs text-[var(--text-tertiary)] font-medium">
                         {p.tag}
                       </span>
                     </div>
                   </div>
                 </div>
                 {/* Desc */}
-                <p className="text-[#6B6B72] text-sm leading-relaxed flex-1">
+                <p className="text-[var(--text-tertiary)] text-sm leading-relaxed flex-1">
                   {p.desc}
                 </p>
                 {/* CTA */}
-                <div className="flex items-center gap-1.5 text-[#C9A84C] text-xs font-semibold uppercase tracking-wider group-hover:gap-2.5 transition-all">
+                <div className="flex items-center gap-1.5 text-[var(--gold)] text-xs font-semibold uppercase tracking-wider group-hover:gap-2.5 transition-all">
                   Visit Platform <ExternalLink size={12} />
                 </div>
               </a>

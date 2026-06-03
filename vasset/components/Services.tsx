@@ -54,11 +54,11 @@ export default function Services() {
           <p className="text-xs font-medium tracking-widest uppercase text-[#C9A84C] mb-4">
             What We Do
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-700 text-white mb-4">
+          <h2 className="font-display text-4xl md:text-5xl font-700 text-[var(--foreground)] mb-4">
             End-to-End Services,<br />
             <span className="gold-gradient">One Ecosystem</span>
           </h2>
-          <p className="text-[#6B6B72] max-w-xl mx-auto text-lg font-light">
+          <p className="text-[var(--text-tertiary)] max-w-xl mx-auto text-lg font-light">
             From physical assets to digital infrastructure — we manage, build, and grow what matters most to your business.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={i}
-              className="card-hover group relative bg-[#111113] border border-[#ffffff08] rounded-2xl p-7 overflow-hidden"
+              className="card-hover group relative bg-[var(--card-bg)] border border-[var(--border-light)] rounded-2xl p-7 overflow-hidden"
             >
               {/* Glow on hover */}
               <div className="absolute top-0 right-0 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -78,19 +78,19 @@ export default function Services() {
               />
 
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-[#C9A84C15] border border-[#C9A84C22] flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl bg-[var(--gold-light-10)] border border-[var(--gold-light-20)] flex items-center justify-center mb-5">
                 <s.icon size={22} className="text-[#C9A84C]" />
               </div>
 
-              <h3 className="font-display font-600 text-white text-lg mb-3">{s.title}</h3>
-              <p className="text-[#6B6B72] text-sm leading-relaxed mb-5">{s.desc}</p>
+              <h3 className="font-display font-600 text-[var(--foreground)] text-lg mb-3">{s.title}</h3>
+              <p className="text-[var(--text-tertiary)] text-sm leading-relaxed mb-5">{s.desc}</p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2">
                 {s.tags.map((t) => (
                   <span
                     key={t}
-                    className="text-xs px-3 py-1 rounded-full bg-[#ffffff06] border border-[#ffffff0a] text-[#9B9BA4] font-medium"
+                    className="text-xs px-3 py-1 rounded-full bg-[var(--border-light)] border border-[var(--border-light)] text-[var(--text-secondary)] font-medium"
                   >
                     {t}
                   </span>

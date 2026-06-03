@@ -28,20 +28,20 @@ export default function About() {
             <p className="text-xs font-medium tracking-widest uppercase text-[#C9A84C] mb-4">
               Who We Are
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-700 text-white mb-6 leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-700 text-[var(--foreground)] mb-6 leading-tight">
               More Than a Company —<br />
               <span className="gold-gradient">A Movement</span>
             </h2>
-            <p className="text-[#6B6B72] text-lg font-light leading-relaxed mb-8">
+            <p className="text-[var(--text-tertiary)] text-lg font-light leading-relaxed mb-8">
               VAsset Global is a diversified asset management and technology company focused on delivering practical solutions across real estate, digital verification, commerce, business services, and workforce management.
             </p>
-            <p className="text-[#6B6B72] text-base font-light leading-relaxed mb-10">
+            <p className="text-[var(--text-tertiary)] text-base font-light leading-relaxed mb-10">
               We serve as the parent company for a growing portfolio of technology products and service brands — each designed to solve everyday challenges for individuals, businesses, and institutions across Africa.
             </p>
 
             {/* Tagline block */}
             <div className="border-l-2 border-[#C9A84C] pl-6 py-1">
-              <p className="font-display text-xl font-600 text-white italic">
+              <p className="font-display text-xl font-600 text-[var(--foreground)] italic">
                 &ldquo;Managing Assets. Building Solutions. Creating Opportunities.&rdquo;
               </p>
             </div>
@@ -52,14 +52,14 @@ export default function About() {
             {pillars.map((p, i) => (
               <div
                 key={i}
-                className="group flex gap-5 bg-[#111113] border border-[#ffffff08] rounded-2xl p-6 hover:border-[#C9A84C22] transition-all duration-300"
+                className="group flex gap-5 bg-[var(--card-bg)] border border-[var(--border-light)] rounded-2xl p-6 hover:border-[var(--gold-light-20)] transition-all duration-300"
               >
-                <div className="shrink-0 w-11 h-11 rounded-xl bg-[#C9A84C12] border border-[#C9A84C1A] flex items-center justify-center">
+                <div className="shrink-0 w-11 h-11 rounded-xl bg-[var(--gold-light-10)] border border-[var(--gold-light-15)] flex items-center justify-center">
                   <p.icon size={20} className="text-[#C9A84C]" />
                 </div>
                 <div>
-                  <h3 className="font-display font-600 text-white mb-2">{p.title}</h3>
-                  <p className="text-[#6B6B72] text-sm leading-relaxed">{p.text}</p>
+                  <h3 className="font-display font-600 text-[var(--foreground)] mb-2">{p.title}</h3>
+                  <p className="text-[var(--text-tertiary)] text-sm leading-relaxed">{p.text}</p>
                 </div>
               </div>
             ))}

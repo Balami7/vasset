@@ -19,12 +19,12 @@ export default function Marquee() {
   const doubled = [...items, ...items];
 
   return (
-    <div className="py-6 border-y border-[#ffffff08] overflow-hidden relative">
+    <div className="py-6 border-y border-[var(--border-light)] overflow-hidden relative">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to right, #0A0A0B, transparent)" }} />
+        style={{ background: "linear-gradient(to right, var(--gradient-fade), transparent)" }} />
       <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to left, #0A0A0B, transparent)" }} />
+        style={{ background: "linear-gradient(to left, var(--gradient-fade), transparent)" }} />
 
       <div
         className="flex gap-8 whitespace-nowrap"
@@ -33,7 +33,7 @@ export default function Marquee() {
         }}
       >
         {doubled.map((item, i) => (
-          <span key={i} className="flex items-center gap-3 text-sm text-[#6B6B72] font-medium shrink-0">
+          <span key={i} className="flex items-center gap-3 text-sm text-[var(--text-tertiary)] font-medium shrink-0">
             <span className="w-1 h-1 rounded-full bg-[#C9A84C]" />
             {item}
           </span>

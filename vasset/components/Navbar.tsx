@@ -51,7 +51,7 @@ export default function Navbar() {
             <li key={l}>
               <a
                 href={`#${l.toLowerCase()}`}
-                className="text-sm text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors duration-200 font-medium"
+                className="text-sm text-[var(--text-secondary)] hover:text-[var(--foreground)] transition-colors duration-200 font-medium"
               >
                 {l}
               </a>
@@ -64,7 +64,7 @@ export default function Navbar() {
           {mounted && (
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors duration-200"
+              className="p-2 rounded-full text-[var(--text-secondary)] hover:text-[var(--foreground)] transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
@@ -95,14 +95,14 @@ export default function Navbar() {
           {mounted && (
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors duration-200"
+              className="p-2 rounded-full text-[var(--text-secondary)] hover:text-[var(--foreground)] transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
           )}
           <button
-            className="text-[var(--text-muted)] hover:text-[var(--foreground)]"
+            className="text-[var(--text-secondary)] hover:text-[var(--foreground)]"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -119,7 +119,7 @@ export default function Navbar() {
               key={l}
               href={`#${l.toLowerCase()}`}
               onClick={() => setOpen(false)}
-              className="block text-sm text-[var(--text-muted)] hover:text-[var(--foreground)] font-medium py-1"
+              className="block text-sm text-[var(--text-secondary)] hover:text-[var(--foreground)] font-medium py-1"
             >
               {l}
             </a>
