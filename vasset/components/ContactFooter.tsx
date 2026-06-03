@@ -80,53 +80,58 @@ export default function ContactFooter() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-[#ffffff08] py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-start justify-between gap-10 mb-12">
-            {/* Brand */}
-            <div className="max-w-xs">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#C9A84C] to-[#8B6914] flex items-center justify-center font-display font-800 text-sm text-black">
-                  V
-                </div>
-                <span className="font-display font-700 text-lg">
-                  VAsset<span className="gold"> Global</span>
-                </span>
-              </div>
-              <p className="text-[#6B6B72] text-sm leading-relaxed">
-                Managing Assets. Building Solutions. Creating Opportunities.
-              </p>
-            </div>
-
-            {/* Links */}
-            <div className="flex flex-wrap gap-x-8 gap-y-3">
-              {footerLinks.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  target={l.href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#6B6B72] hover:text-[#C9A84C] transition-colors font-medium"
-                >
-                  {l.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <hr className="divider-gold opacity-20 mb-8" />
-
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6B6B72]">
-            <p>© {new Date().getFullYear()} VAsset Global. All rights reserved.</p>
-            <p>
-              <a href="https://vassetglobal.com" className="hover:text-[#C9A84C] transition-colors">
-                vassetglobal.com
-              </a>
-            </p>
-          </div>
+     {/* Footer */}
+<footer className="border-t border-[#ffffff08] py-16 px-6">
+  <div className="max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row md:items-start justify-between gap-10 mb-12">
+      {/* Brand */}
+      <div className="max-w-xs">
+        <div className="flex items-center gap-3 mb-4">
+          <Image 
+            src="/logo.png" 
+            alt="VAsset Global Logo" 
+            width={36} 
+            height={36} 
+            className="object-contain"
+          />
+          <span className="font-display font-700 text-lg">
+            VAsset<span className="gold"> Global</span>
+          </span>
         </div>
-      </footer>
+        <p className="text-[#6B6B72] text-sm leading-relaxed">
+          Managing Assets. Building Solutions. Creating Opportunities.
+        </p>
+      </div>
+
+      {/* Links */}
+      <div className="flex flex-wrap gap-x-8 gap-y-3">
+        {footerLinks.map((l) => (
+          <a
+            key={l.label}
+            href={l.href}
+            target={l.href.startsWith("http") ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            className="text-sm text-[#6B6B72] hover:text-[#C9A84C] transition-colors font-medium"
+          >
+            {l.label}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <hr className="divider-gold opacity-20 mb-8" />
+
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6B6B72]">
+      <p>© {new Date().getFullYear()} VAsset Global. All rights reserved.</p>
+      <p>
+        <a href="https://vassetglobal.com" className="hover:text-[#C9A84C] transition-colors">
+          vassetglobal.com
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
     </>
   );
 }
