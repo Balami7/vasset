@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "VAsset Global — Managing Assets. Building Solutions. Creating Opportunities.",
   description: "Africa's premier asset management and technology solutions company.",
+  icons: {
+    icon: "/logo.png", 
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -20,5 +23,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
-
