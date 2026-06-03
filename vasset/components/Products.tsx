@@ -50,10 +50,10 @@ const products: Product[] = [
     border: "border-[var(--gold-light-30)]",
   },
   {
-    name: "Submitar.ng",
+    name: "Submitar.com",
     tag: "Representation",
     desc: "Submit documents, get represented, and retrieve records at government offices or institutions — without being there.",
-    url: "https://submitar.ng",
+    url: "https://submitar.com",
     Icon: ClipboardList, // Assigned corrected icon variable
     color: "from-[var(--gold-light-20)] to-transparent",
     border: "border-[var(--gold-light-30)]",
