@@ -87,7 +87,7 @@ export default function ContactFooter() {
       {/* Brand */}
       <div className="max-w-xs">
         <div className="flex items-center gap-3 mb-4">
-          <Img 
+          <img 
             src="/logo.png" 
             alt="VAsset Global Logo" 
             width={36} 
