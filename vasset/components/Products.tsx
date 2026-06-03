@@ -44,7 +44,7 @@ const products: Product[] = [
     name: "Scancode.ng",
     tag: "QR Platform",
     desc: "Dynamic and static QR code generation with scan analytics, link management, and event access control.",
-    url: "https://scancode.ng",
+    url: "https://scancode.net",
     Icon: Smartphone,
     color: "from-[var(--gold-light-20)] to-transparent",
     border: "border-[var(--gold-light-30)]",
