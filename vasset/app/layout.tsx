@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,8 +18,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body>
-        <div className="grain" aria-hidden="true" />
-        {children}
+        <ThemeProvider>
+          <div className="grain" aria-hidden="true" />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

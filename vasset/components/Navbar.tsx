@@ -2,13 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 const links = ["Services", "Products", "About", "Contact"];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -19,7 +26,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 nav-blur ${
-        scrolled ? "border-b border-[#ffffff08] bg-[#0A0A0Bcc]" : "bg-transparent"
+        scrolled ? "border-b bg-[var(--nav-bg)] border-[var(--border-light)]" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -44,7 +51,7 @@ export default function Navbar() {
             <li key={l}>
               <a
                 href={`#${l.toLowerCase()}`}
-                className="text-sm text-[#9B9BA4] hover:text-white transition-colors duration-200 font-medium"
+                className="text-sm text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors duration-200 font-medium"
               >
                 {l}
               </a>
@@ -52,42 +59,78 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA + Theme Toggle */}
         <div className="hidden md:flex items-center gap-3">
+          {mounted && (
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors duration-200"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+          )}
           <a
             href="https://wa.link/95c1j5"
-            className="text-sm px-5 py-2.5 rounded-full border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-black transition-all duration-300 font-medium"
+            className="text-sm px-5 py-2.5 rounded-full border transition-all duration-300 font-medium"
+            style={{
+              borderColor: "var(--gold)",
+              color: "var(--gold)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--gold)";
+              e.currentTarget.style.color = "var(--background)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.color = "var(--gold)";
+            }}
           >
             Get in Touch
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-[#9B9BA4] hover:text-white"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile Menu Toggle + Theme Toggle */}
+        <div className="md:hidden flex items-center gap-2">
+          {mounted && (
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full text-[var(--text-muted)] hover:text-[var(--foreground)] transition-colors duration-200"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+          )}
+          <button
+            className="text-[var(--text-muted)] hover:text-[var(--foreground)]"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[#111113] border-t border-[#ffffff08] px-6 py-6 space-y-4">
+        <div className="md:hidden bg-[var(--mobile-bg)] border-t border-[var(--border-light)] px-6 py-6 space-y-4">
           {links.map((l) => (
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
               onClick={() => setOpen(false)}
-              className="block text-sm text-[#9B9BA4] hover:text-white font-medium py-1"
+              className="block text-sm text-[var(--text-muted)] hover:text-[var(--foreground)] font-medium py-1"
             >
               {l}
             </a>
           ))}
           <a
             href="mailto:info@vassetglobal.com"
-            className="block text-sm px-5 py-2.5 rounded-full border border-[#C9A84C] text-[#C9A84C] text-center font-medium mt-2"
+            className="block text-sm px-5 py-2.5 rounded-full border text-center font-medium mt-2 transition-all duration-300"
+            style={{
+              borderColor: "var(--gold)",
+              color: "var(--gold)",
+            }}
           >
             Get in Touch
           </a>
